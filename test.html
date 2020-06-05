@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="drag-gbr.css" />
+	<style>
+		#widget {
+			position:absolute; 
+			top:20px; 
+			left:20px;
+			width:500px; 
+			height:500px; 
+			border:1px solid #ccc;
+		}
+	</style>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="drag-gbr.js"></script>
+</head>
+<body> 
+	<div id="widget"></div>
+</body>
+<script type="text/javascript">
+	// new一个全局对象
+	var wgt = new GBRDrag({
+		container : "#widget",
+		calculateType : 'pixel',
+		draggable : true,
+		resizable : true
+	});
+
+	// 添加组件
+	wgt.addWidget(null, 10, 10, 50, 50);
+
+	wgt.addWidget(null, 80, 80, 100, 100);
+
+</script>
+</html>
